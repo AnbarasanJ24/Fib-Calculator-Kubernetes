@@ -9,8 +9,11 @@ spec:
       component: web
   template:
     metadata:
-      label:
+      labels:
         component: web
     spec:
       containers:
-        - name:client
+        - name: client
+          image: anbarasan24/multi-client
+          ports:
+            - containerPort: 3000

@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+Kind: Deployment
+metadata:
+  name: client-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      component: web
+  template:
+    metadata:
+      label:
+        component: web
+    spec:
+      containers:
+        - name:client
